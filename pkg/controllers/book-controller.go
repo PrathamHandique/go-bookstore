@@ -8,9 +8,7 @@ import(
 	"github.com/PrathamHandique/go-bookstore/pkg/models"
 	"github.com/PrathamHandique/go-bookstore/pkg/utils"
 )
-
 var NewBook models.Book
-
 func GetBooks(w http.ResponseWriter, r *http.Request) {
 	// Function body goes here
 	newBooks := models.GetAllBooks()
@@ -47,8 +45,6 @@ func CreateBook(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
 }
-
-
 func DeleteBook(w http.ResponseWriter, r *http.Request) {
 	// Function body goes here
 	vars := mux.Vars(r)
